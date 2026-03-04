@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Bridge - Privacy Policy / 개인정보처리방침</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+        .card { background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h1 { font-size: 28px; color: #1565C0; margin-bottom: 8px; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+        h2 { font-size: 20px; color: #1565C0; margin-top: 32px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #E3F2FD; }
+        h3 { font-size: 16px; color: #444; margin-top: 20px; margin-bottom: 8px; }
+        p, li { font-size: 15px; margin-bottom: 8px; }
+        ul { padding-left: 24px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+        th, td { padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; }
+        th { background: #E3F2FD; color: #1565C0; font-weight: 600; }
+        .lang-switch { text-align: right; margin-bottom: 16px; }
+        .lang-switch a { color: #1565C0; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .section-en { display: none; }
+        .contact { background: #E3F2FD; border-radius: 8px; padding: 16px; margin-top: 24px; }
+        .contact a { color: #1565C0; }
+        .footer { text-align: center; color: #999; font-size: 13px; margin-top: 24px; }
+    </style>
+    <script>
+        function toggleLang() {
+            document.querySelectorAll('.section-ko').forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+            document.querySelectorAll('.section-en').forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+            const btn = document.getElementById('lang-btn');
+            btn.textContent = btn.textContent === 'English' ? '한국어' : 'English';
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch"><a href="javascript:void(0)" id="lang-btn" onclick="toggleLang()">English</a></div>
+    <div class="card">
+
+        <!-- Korean -->
+        <div class="section-ko">
+            <h1>개인정보처리방침</h1>
+            <p class="subtitle">Message Bridge (메시지 중계소) | 시행일: 2025년 3월 5일</p>
+
+            <h2>1. 수집하는 정보</h2>
+            <p>본 앱은 메시지 전달 기능을 제공하기 위해 다음 정보를 처리합니다.</p>
+            <table>
+                <tr><th>데이터 유형</th><th>항목</th><th>처리 방식</th></tr>
+                <tr><td>메시지</td><td>SMS/MMS 발신자, 본문</td><td>사용자가 설정한 채널로 전달 후 기기 내 로그 저장</td></tr>
+                <tr><td>알림</td><td>앱 이름, 제목, 내용</td><td>사용자가 설정한 채널로 전달 후 기기 내 로그 저장</td></tr>
+                <tr><td>이메일 주소</td><td>Gmail 계정</td><td>이메일 발송 인증용, 기기 내 저장</td></tr>
+                <tr><td>광고 ID</td><td>기기 광고 식별자</td><td>AdMob SDK가 광고 표시 목적으로 수집</td></tr>
+            </table>
+
+            <h2>2. 정보의 이용 목적</h2>
+            <ul>
+                <li>수신된 SMS/알림 메시지를 사용자가 설정한 채널(Telegram, Slack, Email, SMS)로 전달</li>
+                <li>전달 이력 기록 및 표시 (기기 내 저장)</li>
+                <li>Gmail API를 통한 이메일 발송</li>
+                <li>AdMob을 통한 배너 광고 표시</li>
+            </ul>
+
+            <h2>3. 정보의 저장 및 보안</h2>
+            <ul>
+                <li>모든 데이터는 <strong>사용자 기기 내</strong>에만 저장됩니다. 별도 서버로 전송하지 않습니다.</li>
+                <li>채널 자격증명(Telegram 봇 토큰, Slack 웹훅 URL)은 <strong>AES-256-GCM 암호화</strong>로 보호됩니다.</li>
+                <li>외부 전송 시 모든 통신은 <strong>HTTPS</strong>로 암호화됩니다.</li>
+                <li>전달 로그는 최대 500건, 30일까지 보관 후 자동 삭제됩니다.</li>
+            </ul>
+
+            <h2>4. 제3자 제공</h2>
+            <p>본 앱은 개발자 서버로 사용자 데이터를 전송하지 않습니다. 다만, 사용자가 직접 설정한 외부 서비스로 메시지가 전달됩니다:</p>
+            <ul>
+                <li><strong>Telegram</strong> — Telegram Bot API를 통해 메시지 전달</li>
+                <li><strong>Slack</strong> — Slack Webhook을 통해 메시지 전달</li>
+                <li><strong>Gmail</strong> — Gmail API를 통해 이메일 발송</li>
+                <li><strong>Google AdMob</strong> — 광고 표시를 위한 광고 ID 수집 (<a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>)</li>
+            </ul>
+
+            <h2>5. 사용자 권리</h2>
+            <ul>
+                <li>앱 설정에서 전달 기능을 켜거나 끌 수 있습니다.</li>
+                <li>전달 규칙, 로그, 채널 설정을 앱 내에서 직접 삭제할 수 있습니다.</li>
+                <li>Gmail/Drive 계정 연결을 앱 내에서 해제할 수 있습니다.</li>
+                <li>앱 삭제 시 기기 내 모든 데이터가 자동으로 삭제됩니다.</li>
+                <li>Android 설정에서 광고 ID를 재설정하거나 맞춤 광고를 비활성화할 수 있습니다.</li>
+            </ul>
+
+            <h2>6. 아동 개인정보</h2>
+            <p>본 앱은 만 18세 이상 사용자를 대상으로 하며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+            <h2>7. 변경 사항</h2>
+            <p>본 방침이 변경될 경우 이 페이지를 통해 공지합니다.</p>
+
+            <div class="contact">
+                <h3>문의</h3>
+                <p>개인정보 관련 문의는 GitHub Issues를 이용해 주세요.<br>
+                <a href="https://github.com/siefried12/message-bridge/issues" target="_blank">https://github.com/siefried12/message-bridge/issues</a></p>
+            </div>
+        </div>
+
+        <!-- English -->
+        <div class="section-en">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Message Bridge | Effective: March 5, 2025</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>This app processes the following information to provide message forwarding functionality.</p>
+            <table>
+                <tr><th>Data Type</th><th>Details</th><th>Processing</th></tr>
+                <tr><td>Messages</td><td>SMS/MMS sender, body</td><td>Forwarded to user-configured channels, logs stored on device</td></tr>
+                <tr><td>Notifications</td><td>App name, title, content</td><td>Forwarded to user-configured channels, logs stored on device</td></tr>
+                <tr><td>Email address</td><td>Gmail account</td><td>Used for email sending authentication, stored on device</td></tr>
+                <tr><td>Advertising ID</td><td>Device ad identifier</td><td>Collected by AdMob SDK for ad display</td></tr>
+            </table>
+
+            <h2>2. How We Use Information</h2>
+            <ul>
+                <li>Forward received SMS/notification messages to user-configured channels (Telegram, Slack, Email, SMS)</li>
+                <li>Record and display forwarding history (stored on device)</li>
+                <li>Send emails via Gmail API</li>
+                <li>Display banner ads via AdMob</li>
+            </ul>
+
+            <h2>3. Data Storage and Security</h2>
+            <ul>
+                <li>All data is stored <strong>only on the user's device</strong>. No data is sent to our servers.</li>
+                <li>Channel credentials (Telegram bot tokens, Slack webhook URLs) are protected with <strong>AES-256-GCM encryption</strong>.</li>
+                <li>All external communications use <strong>HTTPS</strong> encryption.</li>
+                <li>Forwarding logs are automatically deleted after 500 entries or 30 days.</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>This app does not transmit user data to the developer's servers. However, messages are forwarded to external services configured by the user:</p>
+            <ul>
+                <li><strong>Telegram</strong> — Messages forwarded via Telegram Bot API</li>
+                <li><strong>Slack</strong> — Messages forwarded via Slack Webhook</li>
+                <li><strong>Gmail</strong> — Emails sent via Gmail API</li>
+                <li><strong>Google AdMob</strong> — Advertising ID collected for ad display (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
+            </ul>
+
+            <h2>5. Your Rights</h2>
+            <ul>
+                <li>You can enable or disable forwarding in the app settings.</li>
+                <li>You can delete forwarding rules, logs, and channel settings directly within the app.</li>
+                <li>You can disconnect Gmail/Drive accounts within the app.</li>
+                <li>Uninstalling the app automatically deletes all on-device data.</li>
+                <li>You can reset your advertising ID or opt out of personalized ads in Android settings.</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <p>This app is intended for users aged 18 and above. We do not knowingly collect personal information from children.</p>
+
+            <h2>7. Changes</h2>
+            <p>Any changes to this policy will be posted on this page.</p>
+
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>For privacy-related inquiries, please use GitHub Issues.<br>
+                <a href="https://github.com/siefried12/message-bridge/issues" target="_blank">https://github.com/siefried12/message-bridge/issues</a></p>
+            </div>
+        </div>
+    </div>
+    <p class="footer">&copy; 2025 Message Bridge. All rights reserved.</p>
+</div>
+</body>
+</html>
